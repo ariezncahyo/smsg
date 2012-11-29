@@ -1,0 +1,5 @@
+give permission to use modem
+sudo usermod -a -G dialout,plugdev piko
+sudo reboot
+
+
