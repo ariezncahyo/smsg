@@ -14,7 +14,7 @@ font-family: "Trebuchet MS", Helvetica, sans-serif;
 <br>
 <strong>LOGIN<strong>
 <br>
-<form method="post" action="controller/c_loginsubmit.php">
+<form method="post" action="lib/c_loginsubmit.php">
   <table border="0">
     <tr>
       <td>Username </td>

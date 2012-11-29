@@ -10,5 +10,5 @@ echo "<a href='../main/kontak.php'><img src=\"../view/images/kontak.png\" height
 echo " | ";
 echo "<a href='../main/pengaturan.php'><img src=\"../view/images/pengaturan.png\" height=\"15px\"> Pengaturan</a>";
 echo " | ";
-echo "<a href='../controller/c_logout.php'><img src=\"../view/images/close.png\" height=\"15px\"> Logout</a>";
+echo "<a href='../lib/c_logout.php'><img src=\"../view/images/close.png\" height=\"15px\"> Logout</a>";
 ?>

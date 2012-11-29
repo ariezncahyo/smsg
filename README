@@ -11,6 +11,7 @@ pasang smsg di htdocs dan import berkas database smsd.sql di folder db
 ke database smsd milik gammu .
 
 todolist :
+- check if gammu-smsd running. if not, exec to run in  background
 - manajemen user dan level administrasi
 - manajemen kontak
 - manajemen group

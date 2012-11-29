@@ -1,7 +1,7 @@
 <html>
 <body>
 <?php
-include "../controller/general.php";
+include "../lib/general.php";
 $page="kirim_sms";
 menu($page);
 ?>
