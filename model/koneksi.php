@@ -1,6 +1,6 @@
 <?php
 $host="localhost";
-$user="root";
-$password="a";
+$user="piko";
+$password="piko";
 $dbname="smsd";
 ?>
