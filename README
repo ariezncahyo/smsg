@@ -1,0 +1,18 @@
+smsg adalah frontend untuk gammu-smsd berbasis PHP dan MySQL. Ini adalah 
+proyek yang saya buat sebagai praktek untuk memahami PHP dan MySQL.
+
+howto :
+kode smsg bekerja untuk server apache yang jalan di GNU/linux.
+pastikan gammu-smsd telah terpasang dan mendeteksi perangkat 
+(ponsel/modem) terkonfigurasi dengan mysql, dan 
+bisa digunakan untuk mengirim dan menerima sms dengan user biasa.
+
+pasang smsg di htdocs dan import berkas database smsd.sql di folder db 
+ke database smsd milik gammu .
+
+todolist :
+- manajemen user dan level administrasi
+- manajemen kontak
+- manajemen group
+- batch sms dengan group kontak
+- desain ulang CSS
