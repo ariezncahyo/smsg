@@ -1,18 +1,22 @@
 <?php
 
-echo "KONTAK<br>";
+echo "GROUP<br>";
 			echo "<div style=\"float:right; padding-right:20px;\">
 
-			<a href=\"../main/kontak_tambah.php\" ><img src=\"../view/images/add.png\" height=\"15px\"> Tambah kontak </a>
+			<a href=\"../main/kontak_group_tambah.php\" ><img src=\"../view/images/add.png\" height=\"15px\"> Tambah group </a>
 			|
-			<a href=\"../main/kontak_group.php\" ><img src=\"../view/images/group.png\" height=\"15px\"> Kelola Group </a>
+			<a href=\"../main/kontak.php\" ><img src=\"../view/images/kontak.png\" height=\"15px\"> Kelola kontak </a>
 
 			</div>";
 
 
-			// tabel daftar kontak
-			//mengambil data kontak, membership, dan group dari db
+			// tabel daftar kontak, select from kontak > $result
 			include "../db/m_kontak.php";
+
+			//select from kontak_group, jumlah group
+			$hasil_group=mysql_query("select * from kontak_group")or die(mysql_error());
+			$jumlahgroup=mysql_num_rows($hasil_group);
+			echo "jumlah group ".$jumlahgroup;
 
 				echo "<table cellspacing=\"0\" border=\"1\" bordercolor=\"white\" width=\"1000px\" >";
 				echo "<tr bgcolor=\"#69AEE7\" align=\"center\">";
@@ -20,13 +24,10 @@ echo "KONTAK<br>";
 				echo "No";
 				echo "</td>";
 				echo "<td>";
-				echo "Nama";
+				echo "Nama Group";
 				echo "</td>";
 				echo "<td>";
-				echo "Nomor HP";
-				echo "</td>";
-				echo "<td>";	
-				echo "Group";
+				echo "Anggota Group";
 				echo "</td>";
 				echo "<td width=\"60px\">";
 				echo "SMS";
@@ -41,30 +42,39 @@ echo "KONTAK<br>";
 				echo "<tr>";
 
 				//perulangan untuk menampilkan keseluruhan data di tabel (perulangan baris)
-				for ($i=0;$i<$nrows;$i++)
+				for ($i=0;$i<$jumlahgroup;$i++)
 				{
 
 				//perulangan untuk nomor urut di tampilan
 				$nomor=$i+1; 
 
-				$datakontak = mysql_fetch_assoc($result)or die(mysql_error());
-				extract($datakontak);
+				//mengambil data dari db
+
 				//baris tabel
 				echo "<tr bgcolor=\"#DCDCDC\"  align=\"center\">";
 				echo "<td>";
 				echo $nomor;
 				echo "</td>";
 				echo "<td>";
-				echo $datakontak['nama_kontak'];
+				$datagroup = mysql_fetch_assoc($hasil_group)or die(mysql_error());
+				extract($datagroup);
+				echo $group_name." (".$group_ID.")";
 				echo "</td>";
 				echo "<td>";
-				echo $datakontak['nomor_kontak'];
-				echo "</td>";
-				echo "<td>";
-				$ID=$datakontak['ID'];
-				$result_membership=mysql_query("select kontak_group.* from kontak, kontak_membership, kontak_group where kontak_membership.kontak_ID='$ID' and kontak_group.group_ID=kontak_membership.group_ID limit 1");
-				$membership=mysql_fetch_assoc($result_membership);
-				echo $membership['group_name'];
+				
+
+				$hasil_member=mysql_query("select kontak.* from kontak, kontak_membership where kontak_membership.group_ID='$group_ID' and kontak_membership.kontak_ID=kontak.ID");
+				$jumlahmember=mysql_num_rows($hasil_member);
+
+				$x=1;
+				while ($x<=$jumlahmember)
+						{
+						$member=mysql_fetch_assoc($hasil_member);
+						extract($member);
+						echo $member['nama_kontak'];
+						echo " - ";
+						$x++;
+						}
 				echo "</td>";
 				echo "<td>";
 				echo "<a href=\"../main/kontak_kirim.php?ID=";
@@ -77,14 +87,13 @@ echo "KONTAK<br>";
 				echo "<td>";
 				//prompt pop up sebelum hapus
 				echo "<a href=\"javascript:konfirmasi_hapus('Yakin dihapus?',
-'../main/kontak_hapus.php?ID_hapus=";
-				echo $datakontak['ID'];
+'../main/kontak_group_hapus.php?ID_hapus=";
+				echo $group_ID;
 				echo "')\" onclick=\"myFunction()\"><img src=\"../view/images/delete.png\" height=\"15px\"></a>";		
 				echo "</td>";
 				echo "<tr>";
 					}
 				echo "</table>";
-
 
 
 ?>

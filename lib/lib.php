@@ -73,6 +73,46 @@ function menu($action)
 			include "../lib/c_kontak_hapus.php";
 			break;
 
+
+		//kontak edit
+		case "kontak_edit" :
+			include "../lib/c_kontak_edit.php";
+			break;
+
+		//kontak edit simpan
+		case "kontak_edit_simpan" :
+			include "../lib/c_kontak_edit_simpan.php";
+			break;
+
+		//kontak kirim
+		case "kontak_kirim" :
+			include "../lib/c_kontak_kirim.php";
+			break;
+
+		//kontak kirim
+		case "kontak_kirim_proses" :
+			include "../lib/c_kontak_kirim_proses.php";
+			break;
+
+		//kontak group
+		case "kontak_group" :
+			include "../lib/c_kontak_group.php";
+			break;
+		//kontak group tambah
+		case "kontak_group_tambah" :
+			include "../lib/c_kontak_group_tambah.php";
+			break;
+
+		//kontak group tambah simpan
+		case "kontak_group_tambah_simpan" :
+			include "../lib/c_kontak_group_tambah_simpan.php";
+			break;
+
+		//kontak group hapus
+		case "kontak_group_hapus" :
+			include "../lib/c_kontak_group_hapus.php";
+			break;
+
 		//halaman pengaturan
 		case "pengaturan" :
 			include "../lib/c_pengaturan.php";

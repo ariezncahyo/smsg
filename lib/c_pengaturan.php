@@ -44,12 +44,8 @@ PENGATURAN
 	  <h2>Log</h2>
 	  <p>
 <?php
-			echo "PENGATURAN<br>";
-			echo "Ini adalah halaman Pengaturan yang berisi manajemen user, service gammu, dan log sistem. [sedang dalam pengembangan]";
-			echo "<br>";
-			echo "<br>";
-			echo "<br>";
-			echo "<strong>Gammu-SMSDaemon's Log</strong><br>";
+			
+			echo "<strong>Gammu SMS Daemon Log</strong><br>";
 			echo "<br>";
 			$output=array(); 
 			exec("tail /etc/gammu-smsd.log", $output);

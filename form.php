@@ -12,7 +12,7 @@ font-family: "Trebuchet MS", Helvetica, sans-serif;
 </style>
 <body>
 <br>
-<strong>LOGIN<strong>
+<strong>LOGIN</strong>
 <br>
 <form method="post" action="lib/c_loginsubmit.php">
   <table border="0">
@@ -26,7 +26,7 @@ font-family: "Trebuchet MS", Helvetica, sans-serif;
     </tr>
     <tr>
       <td>&nbsp;</td>
-      <td><input type="submit" name="Submit" value="Submit"></td>
+      <td><input type="submit" name="" value="Login"></td>
     </tr>
   </table>
 </form>
