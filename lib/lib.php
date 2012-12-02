@@ -36,9 +36,14 @@ function menu($action)
 			include "../lib/c_kirim_lagi.php";
 			break;
 
-		//form kirim sms baru dengan form kosong
+		//form kirim sms baru
 		case "kirim_sms" :
 			include "../lib/c_kirim_sms.php";
+			break;
+
+		//form kirim sms baru ke satu tujuan
+		case "kirim_sms" :
+			include "../lib/c_kirim_sms_satu.php";
 			break;
 
 		//proses kirim balasan dengan perubahan status boolean auto respon

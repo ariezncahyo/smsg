@@ -1,5 +1,6 @@
 <html>
-
+<head>
+</head>
 <body>
 <style type="text/css">
 body
