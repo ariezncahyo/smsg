@@ -41,6 +41,7 @@ function menu($action)
 			include "../lib/c_kirim_sms.php";
 			break;
 
+
 		//form kirim sms baru ke satu tujuan
 		case "kirim_sms" :
 			include "../lib/c_kirim_sms_satu.php";
@@ -56,6 +57,10 @@ function menu($action)
 			include "../lib/c_kirim_proses_baru.php";
 		    break;
 
+		//form kirim sms multikontak
+		case "kirim_proses_multikontak" :
+			include "../lib/c_kirim_proses_multikontak.php";
+			break;
 
 		//halaman kontak
 		case "kontak" :
@@ -116,6 +121,16 @@ function menu($action)
 		//kontak group hapus
 		case "kontak_group_hapus" :
 			include "../lib/c_kontak_group_hapus.php";
+			break;
+
+		//kontak group edit
+		case "kontak_group_edit" :
+			include "../lib/c_kontak_group_edit.php";
+			break;
+
+		//kontak group edit simpan
+		case "kontak_group_edit_simpan" :
+			include "../lib/c_kontak_group_edit_simpan.php";
 			break;
 
 		//halaman pengaturan

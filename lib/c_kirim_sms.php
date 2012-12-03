@@ -17,7 +17,7 @@ document.write('<style type="text/css">.tabber{display:none;}<\/style>');
 <div class="tabber">
 
      <div class="tabbertab">
-	  <h2>Satu Tujuan</h2>
+	  <h2>Tujuan Tidak Terdaftar</h2>
 	  <?php
 	//membuat dan mengirim sms baru (variabel kosong)
 	echo "<form action=\"../main/kirim.php\" method=\"POST\">";
@@ -28,23 +28,23 @@ document.write('<style type="text/css">.tabber{display:none;}<\/style>');
 	echo "</td></tr><tr><td></td><td>";
 	echo "<input type=\"submit\" value=\"Kirim\">";
 	echo "</td></tr></table></form>";
-
-?>
+	?>
      </div>
 
      <div class="tabbertab">
-	  <h2>Ke Beberapa Tujuan</h2>
+	  <h2>Dari Kontak</h2>
+	  <form action="../main/kirim_multikontak.php" method="POST">
 	  <table>
 	  <tr><td>
 	  Tujuan  :<br>
-	  <select multiple name="multikirim" id="sm" size=6>
+	  <select multiple=\"true\" name="multikontak[]" id="sm" size=/"7/">
 	  	<?php
 	  		include "../db/m_kontak.php";
 			$i=1;
 			while ($i<=$nrows) {
 				$datakontak = mysql_fetch_assoc($result)or die(mysql_error());
 				extract($datakontak);
-				echo "<option>".$datakontak['nama_kontak']."</option>";
+				echo "<option value=\"".$datakontak['nama_kontak']."\">".$datakontak['nama_kontak']."</option>";
 				$i++;
 			}
 		?>
@@ -53,7 +53,7 @@ document.write('<style type="text/css">.tabber{display:none;}<\/style>');
 	  Pesan :<br>
 		<textarea name="pesan" rows="4" cols="40"></textarea>
 		<br>
-		<input type="submit" value="Kirim">
+		<input type="submit" value="Kirim"></form>
 		</td></tr></table>
 		<script type='text/javascript'>
 
@@ -115,7 +115,7 @@ multiSelect( "sm2" );
      </div>
 
      <div class="tabbertab">
-	  <h2>Berdasarkan Group</h2>
+	  <h2>Dari Group</h2>
 	  <p>Group SMS</p>
      </div>
 </div>

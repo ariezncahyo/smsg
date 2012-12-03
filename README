@@ -13,8 +13,11 @@ ke database smsd milik gammu .
 todolist :
 - manajemen kontak - ok
 - manajemen group - ok
-- multi group
+- ajax frame autoreload on inbox, signal, status, etc
+- multi group - ok
 - batch sms dengan group kontak
 - manajemen user dan level administrasi
+- sms threaded
 - check if gammu-smsd running. if not, exec to run in  background
+- security
 - desain ulang CSS

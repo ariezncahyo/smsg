@@ -1,0 +1,4 @@
+MYSQL
+
+alter table x rename to y
+alter table x add(new)/change(field)/modify(type)/drop(hapus)

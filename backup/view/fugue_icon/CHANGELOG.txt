@@ -1,0 +1,5 @@
+Changelog for the Fugue theme for the Claws Mail project:
+
+2009-09-09: version 1.0, based on Claws Mail 3.7.2cvs27.
+* First release.
+

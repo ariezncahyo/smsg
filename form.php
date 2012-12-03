@@ -4,15 +4,19 @@ body
 {
 background-image:url('view/images/debut_light.png');
 background-repeat:repeat;
-width: 710px ;
-margin-left: auto ;
-margin-right: auto ;
+width: 1000px ;
+margin-top: 150px;
+margin-left:auto;
+margin-right: auto;
 font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 </style>
 <body>
+<table width="100%"><tr><td align="center">
+<h2><strong>SMSG</strong></h2>
+-- Open Source SMS Gateway Management --
 <br>
-<strong>LOGIN</strong>
+<br>
 <br>
 <form method="post" action="lib/c_loginsubmit.php">
   <table border="0">
@@ -30,6 +34,7 @@ font-family: "Trebuchet MS", Helvetica, sans-serif;
     </tr>
   </table>
 </form>
+</td></tr></table>
 <?php
 include "view/footer.php";
 ?>
