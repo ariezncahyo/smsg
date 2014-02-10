@@ -1,5 +1,11 @@
+smsg codes are no longer maintained. You may take a look at herpiko/smsbro, my newer project for the same purpose as smsg. 
+
+In bahasa : 
 smsg adalah frontend untuk gammu-smsd berbasis PHP dan MySQL. Ini adalah 
 proyek yang saya buat sebagai praktek untuk memahami PHP dan MySQL.
+Karena ini proyek pertama untuk coba-coba, kodenya begitu kotor dan amburadul.
+Bahkan saya salah memfungsikan gammu. Alih-alih menginject ke database,
+saya malah mengirim satu per satu dengan shell_exec.
 
 howto :
 kode smsg bekerja untuk server apache yang jalan di GNU/linux.
